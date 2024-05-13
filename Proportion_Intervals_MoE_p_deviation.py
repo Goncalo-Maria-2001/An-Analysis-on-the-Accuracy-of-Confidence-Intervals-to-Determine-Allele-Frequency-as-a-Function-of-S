@@ -21,7 +21,7 @@ for n in sample_sizes:
     moes = []
 
     for _ in range(num_simulations):
-        p = 1/4 + (np.random.uniform(-1, 1)/max(n,10))
+        p = 1/4 + random.uniform(-(1/40), (1/40))
 
         sample_count = binom.rvs(n, p, size=1)
         phat = sample_count[0] / n
